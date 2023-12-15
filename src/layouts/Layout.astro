@@ -1,5 +1,6 @@
 ---
 import "../styles/globals.css";
+import Header from "../components/Header.tsx";
 
 interface Props {
   title: string;
@@ -15,7 +16,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -24,7 +25,10 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-neutral-base">
+  <body
+    class="bg-neutral-base text-neutral-1000 font-garamond text-lg h-[1000px]"
+  >
+    <Header client:load />
     <slot />
   </body>
 </html>
