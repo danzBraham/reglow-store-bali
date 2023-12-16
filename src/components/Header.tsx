@@ -1,78 +1,78 @@
-import { useState } from "react";
+import { $, component$, useSignal } from "@builder.io/qwik";
 import { NAV_LINKS } from "../constants";
 import logo from "../assets/logo.svg";
-import whatsapp from "../assets/whatsapp.svg";
+import whatsappWhite from "../assets/whatsapp-white.svg";
 
-const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+const Header = component$(() => {
+  const isActive = useSignal(false);
 
-  const handleClick = () => {
-    if (window.innerWidth >= 1024) {
+  const setIsActive = $(() => {
+    if (window.innerWidth > 1024) {
       return;
     }
-    setIsActive((currentState) => !currentState);
-  };
+    isActive.value = !isActive.value;
+  });
 
   return (
-    <header className="max-container w-full fixed bg-neutral-base/50 backdrop-blur-md">
+    <header class="w-full fixed bg-neutral-base/50 backdrop-blur-md z-50">
       <nav
-        className={`flex items-center py-4 justify-between px-5 lg:px-10 duration-300 ${
-          isActive && "bg-main-base"
+        class={`max-container flex items-center py-2 lg:py-3 justify-between px-5 lg:px-10 duration-300 ${
+          isActive.value && "bg-main-200"
         }`}
       >
         <a href="/#beranda">
-          <img src={logo.src} alt="Logo" className="w-[85px]" />
-          <span className="sr-only">Go to Beranda</span>
+          <img src={logo.src} alt="Logo" class="w-[85px]" />
+          <span class="sr-only">Pergi ke Beranda</span>
         </a>
         <div
-          className={`invisible opacity-0 duration-300 absolute lg:visible lg:static lg:opacity-100 left-0 right-0 min-h-fit rounded-b-xl py-10 w-full lg:w-fit top-[63px] bg-main-base px-5 lg:rounded-none lg:p-0 lg:bg-transparent ${
-            isActive && "slide"
+          class={`invisible opacity-0 duration-300 absolute lg:visible lg:static lg:opacity-100 left-0 right-0 min-h-fit rounded-b-xl py-10 w-full lg:w-fit top-[63px] bg-main-200 px-5 lg:rounded-none lg:p-0 lg:bg-transparent ${
+            isActive.value && "slide"
           }`}
         >
-          <ul className="flex items-center justify-center gap-14 flex-col text-lg w-full text-medium lg:flex-row">
+          <ul class="flex items-center justify-center gap-10 flex-col text-lg w-full text-medium lg:flex-row lg:gap-12">
             {NAV_LINKS.map((link) => (
-              <li key={link.key} onClick={handleClick}>
-                <a href={link.href} className="links">
+              <li key={link.key} onClick$={setIsActive}>
+                <a href={link.href} class="links py-[2px]">
                   {link.label}
                 </a>
               </li>
             ))}
-            <li className="w-full lg:w-fit">
+            <li class="w-full lg:w-fit">
               <a
                 href="https://wa.me/6282135101372"
                 target="_blank"
-                className="flex gap-2 bg-accent-base py-3 px-5 w-full lg:w-fit items-center rounded-xl hover:bg-accent-300 lg:py-2 lg:bg-main-base lg:hover:bg-main-200"
+                class="flex gap-2 bg-accent-base py-3 px-5 w-full lg:w-fit items-center rounded-xl hover:bg-accent-300 lg:py-2"
               >
                 <img
-                  src={whatsapp.src}
+                  src={whatsappWhite.src}
                   alt="Whatsapp Logo"
-                  className="w-[25px] absolute z-10 lg:static lg:z-0 lg:w-[20px]"
+                  class="w-[25px] absolute z-10 lg:static lg:z-0 lg:w-[20px]"
                 />
-                <p className="text-center w-full">Pesan</p>
+                <p class="text-center w-full text-neutral-50">Pesan</p>
               </a>
             </li>
           </ul>
         </div>
         <div
-          className="relative flex h-8 w-[35px] items-center justify-center lg:hidden"
-          onClick={handleClick}
+          class="relative flex h-8 w-[35px] items-center justify-center lg:hidden"
+          onClick$={setIsActive}
         >
           <button
-            className={`absolute flex w-full flex-col items-end gap-2 ${
-              isActive && "hamburger"
+            class={`absolute flex w-full flex-col items-end gap-2 ${
+              isActive.value && "hamburger"
             }`}
           >
-            <span className="block h-[3px] w-full origin-top-right rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
-            <span className="block h-[3px] w-full rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
-            <span className="block h-[3px] w-full origin-bottom-right rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
+            <span class="block h-[3px] w-full origin-top-right rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
+            <span class="block h-[3px] w-full rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
+            <span class="block h-[3px] w-full origin-bottom-right rounded transition duration-300 ease-in-out bg-neutral-1000"></span>
           </button>
         </div>
       </nav>
-      <div className="px-5 lg:px-10">
-        <div className="mx-auto h-[3px] rounded-xl duration-300 bg-main-base w-full"></div>
+      <div class="px-5 lg:px-10">
+        <div class="mx-auto h-[3px] max-w-[1360px] rounded-xl duration-300 bg-main-base w-full"></div>
       </div>
     </header>
   );
-};
+});
 
 export default Header;

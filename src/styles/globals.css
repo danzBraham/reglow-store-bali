@@ -4,7 +4,7 @@
 
 @layer utilities {
   .max-container {
-    @apply mx-auto max-w-[1440px];
+    @apply m-auto max-w-[1440px];
   }
 
   .slide {
@@ -17,7 +17,7 @@
 
   .links::after {
     content: "";
-    @apply absolute -bottom-0.5 left-0 h-[2px] w-0 bg-accent-300 duration-300 hover:w-full;
+    @apply absolute -bottom-0.5 left-0 h-[2px] lg:w-0 bg-accent-base duration-300 lg:hover:w-full w-full;
   }
 
   .hamburger > span:first-child {

@@ -5,6 +5,7 @@ interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
+  { key: "beranda", href: "#beranda", label: "Beranda" },
   { key: "manfaat", href: "#manfaat", label: "Manfaat" },
   { key: "keunggulan", href: "#keunggulan", label: "Keunggulan" },
   { key: "bahan", href: "#bahan", label: "Bahan" },
