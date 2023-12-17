@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero-image.png";
-import WhatsappButton from "./WhatsappButton.astro";
+import WhatsappButton from "./WhatsappButton.tsx";
 ---
 
 <section
@@ -22,7 +22,9 @@ import WhatsappButton from "./WhatsappButton.astro";
       </p>
       <WhatsappButton label="Pesan Sekarang" color="black" font="montserrat" />
     </div>
-    <div class="w-full md:max-w-[400px] lg:max-w-[450px] xl:max-w-[650px]">
+    <div
+      class="w-full drop-shadow-lg md:max-w-[400px] lg:max-w-[450px] xl:max-w-[650px]"
+    >
       <Image src={heroImage} alt="Gambar Hero" />
     </div>
   </div>
