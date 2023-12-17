@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import manfaatImage from "../assets/manfaat-image.png";
+import { MANFAAT } from "../constants";
+---
+
+<section
+  id="beranda"
+  class="w-full bg-gradient-to-br from-main-base via-main-100 to-main-50 px-5 py-20 pt-16 lg:px-10"
+>
+  <div class="max-container flex w-full flex-col gap-10 lg:gap-16">
+    <div class="flex flex-col items-center justify-center gap-3 text-center">
+      <h1 class="text-3xl font-semibold leading-[110%] lg:text-4xl xl:text-5xl">
+        Kulit Sehat Dimulai dengan <span class="text-accent-base">Reglow!</span>
+      </h1>
+      <p class="max-w-2xl font-montserrat leading-[140%] lg:text-lg">
+        Mulai Perjalanan Kulit Sehat Anda dengan Reglow! Temukan Solusi untuk
+        Kelembutan dan Kecerahan Kulit yang Istimewa.
+      </p>
+    </div>
+    <div
+      class="flex items-center justify-center gap-10 max-md:flex-col lg:gap-20 xl:gap-32"
+    >
+      <div
+        class="w-full drop-shadow-lg md:max-w-[350px] lg:max-w-[380px] xl:max-w-[420px]"
+      >
+        <Image src={manfaatImage} alt="Manfaat Reglow" />
+      </div>
+      <ol class="flex flex-col gap-7">
+        {
+          MANFAAT.map(({ no, manfaat }) => (
+            <li class="flex h-fit w-full items-center gap-4 font-montserrat text-lg xl:text-xl">
+              <p class="h-fit rounded-lg bg-accent-base px-3 py-1 text-neutral-base">
+                {no}
+              </p>
+              <p>{manfaat}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>
