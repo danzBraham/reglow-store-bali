@@ -1,0 +1,16 @@
+---
+import CardUnggul from "./CardUnggul.astro";
+import { KEUNGGULAN } from "../constants";
+---
+
+<section
+  id="keunggulan"
+  class="max-container flex w-full flex-col gap-14 px-5 py-16 lg:gap-16 lg:px-10"
+>
+  <h1 class="text-center text-4xl font-semibold leading-[110%] lg:text-5xl">
+    Keunggulan <span class="text-accent-base">Reglow</span>
+  </h1>
+  <div class="grid w-full grid-cols-1 gap-12 lg:grid-cols-3">
+    {KEUNGGULAN.map((unggul) => <CardUnggul {...unggul} />)}
+  </div>
+</section>

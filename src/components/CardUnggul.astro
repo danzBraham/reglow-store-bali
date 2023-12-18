@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  img: any;
+  keunggulan: string;
+  deskripsi: string;
+}
+
+const { img, keunggulan, deskripsi } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center gap-[30px] rounded-[20px] p-[30px] text-center font-montserrat shadow-[0_8px_24px_0_rgba(0,0,0,0.1)]"
+>
+  <div class="flex items-center justify-center rounded-xl bg-main-base p-3">
+    <Image src={img} alt={keunggulan} class="w-full" />
+  </div>
+  <div class="flex flex-col items-center gap-5">
+    <p class="text-2xl font-medium">{keunggulan}</p>
+    <p class="max-w-md">{deskripsi}</p>
+  </div>
+</div>
