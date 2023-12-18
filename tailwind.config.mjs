@@ -6,7 +6,12 @@ export default {
   theme: {
     extend: {
       screens: {
+        "mobile-md": "410px",
         wide: "1440px",
+      },
+      boxShadow: {
+        small: "0px 4px 12px 0px rgba(0, 0, 0, 0.1)",
+        basic: "0px 8px 24px 0px rgba(0, 0, 0, 0.1)",
       },
       fontFamily: {
         garamond: ["EB Garamond Variable", ...defaultTheme.fontFamily.serif],

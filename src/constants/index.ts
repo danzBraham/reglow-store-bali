@@ -2,6 +2,12 @@ import check from "../assets/check.svg";
 import gender from "../assets/gender.svg";
 import telp from "../assets/telp.svg";
 
+import centella from "../assets/centella.png";
+import niacinamide from "../assets/niacinamide.png";
+import aloe from "../assets/aloe.png";
+import cucumicus from "../assets/cucumicus.png";
+import vitamin from "../assets/vitamin.png";
+
 interface NavLink {
   key: string;
   href: string;
@@ -46,8 +52,7 @@ export const KEUNGGULAN: Keunggulan[] = [
   {
     img: gender,
     keunggulan: "Bisa untuk Pria dan Wanita",
-    deskripsi:
-      "Reglow hadir untuk pria dan wanita. Pengalaman kecantikan yang merata dan inklusif",
+    deskripsi: "Reglow hadir untuk pria dan wanita. Pengalaman kecantikan yang merata dan inklusif",
   },
   {
     img: telp,
@@ -55,4 +60,17 @@ export const KEUNGGULAN: Keunggulan[] = [
     deskripsi:
       "Nikmati konsultasi gratis bersama tim kami untuk langkah terbaik menuju kulit yang sehat dan bersinar",
   },
+];
+
+interface Bahan {
+  img: any;
+  namaBahan: string;
+}
+
+export const BAHAN: Bahan[] = [
+  { img: centella, namaBahan: "Centella Asiatica" },
+  { img: niacinamide, namaBahan: "Niacinamide" },
+  { img: aloe, namaBahan: "Aloe Vera Extract" },
+  { img: cucumicus, namaBahan: "Cucumicus Sativus" },
+  { img: vitamin, namaBahan: "Vitamin E" },
 ];
