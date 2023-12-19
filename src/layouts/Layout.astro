@@ -5,14 +5,9 @@ import Header from "../components/Header.tsx";
 interface Props {
   title: string;
   description?: string;
-  image?: string;
 }
 
-const {
-  title = "Reglow Store Bali",
-  description = "Agen Reglow bali",
-  image = "/images/reglow.png",
-} = Astro.props;
+const { title = "Reglow Store Bali", description = "Agen Reglow bali" } = Astro.props;
 ---
 
 <!doctype html>

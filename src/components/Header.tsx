@@ -1,7 +1,6 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { NAV_LINKS } from "../constants";
 import logo from "../assets/logo.svg";
-import whatsappWhite from "../assets/whatsapp-white.svg";
 import WhatsappButton from "./WhatsappButton.tsx";
 
 const Header = component$(() => {
@@ -39,12 +38,7 @@ const Header = component$(() => {
               </li>
             ))}
             <li class="w-full lg:w-fit">
-              <WhatsappButton
-                label="Pesan"
-                color="white"
-                font="garamond"
-                size="small"
-              />
+              <WhatsappButton label="Pesan" color="white" font="garamond" size="small" />
             </li>
           </ul>
         </div>
@@ -53,9 +47,7 @@ const Header = component$(() => {
           onClick$={setIsActive}
         >
           <button
-            class={`absolute flex w-full flex-col items-end gap-2 ${
-              isActive.value && "hamburger"
-            }`}
+            class={`absolute flex w-full flex-col items-end gap-2 ${isActive.value && "hamburger"}`}
           >
             <span class="block h-[3px] w-full origin-top-right rounded bg-neutral-1000 transition duration-300 ease-in-out"></span>
             <span class="block h-[3px] w-full rounded bg-neutral-1000 transition duration-300 ease-in-out"></span>
