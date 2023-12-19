@@ -7,6 +7,7 @@ interface Props {
   color: "white" | "black";
   font: "montserrat" | "garamond";
   size?: "small" | "default";
+  width?: "fit" | "full";
 }
 
 const whatsappIcon = {
@@ -15,12 +16,13 @@ const whatsappIcon = {
 };
 
 const WhatsappButton = component$<Props>(
-  ({ label = "Pesan", color, font, size = "default" }) => {
+  ({ label = "Pesan", color, font, size = "default", width = "fit" }) => {
     return (
       <a
         href="https://wa.me/6285829125631"
         target="_blank"
-        class={`flex w-full items-center gap-3 rounded-xl px-5 py-3 text-lg md:w-fit font-${font}
+        class={`flex w-full items-center gap-3 rounded-xl px-5 py-3 text-lg  font-${font}
+        ${width === "fit" ? "md:w-fit" : "md:w-full"}
         ${size === "small" && "lg:py-2"}
         ${
           color === "white"
@@ -31,7 +33,7 @@ const WhatsappButton = component$<Props>(
         <img
           src={whatsappIcon[color]}
           alt="Whatsapp Logo"
-          class={`absolute z-10 w-[25px] md:static ${
+          class={`absolute z-10 w-[25px] ${width === "fit" && "md:static"}  ${
             size === "small" && "lg:w-[20px]"
           }`}
         />

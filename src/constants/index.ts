@@ -8,6 +8,10 @@ import aloe from "../assets/aloe.png";
 import cucumicus from "../assets/cucumicus.png";
 import vitamin from "../assets/vitamin.png";
 
+import paketGlowing from "../assets/paket-glowing-skin.png";
+import paketKorean from "../assets/paket-korean-glass.png";
+import paketFull from "../assets/paket-full-booster.png";
+
 interface NavLink {
   key: string;
   href: string;
@@ -73,4 +77,32 @@ export const BAHAN: Bahan[] = [
   { img: aloe, namaBahan: "Aloe Vera Extract" },
   { img: cucumicus, namaBahan: "Cucumicus Sativus" },
   { img: vitamin, namaBahan: "Vitamin E" },
+];
+
+interface Paket {
+  img: any;
+  namaPaket: string;
+  harga: string;
+  produks: string[];
+}
+
+export const PAKET: Paket[] = [
+  {
+    img: paketGlowing,
+    namaPaket: "Paket Glowing Skin Treatment",
+    harga: "Rp265.000",
+    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash"],
+  },
+  {
+    img: paketKorean,
+    namaPaket: "Paket Korean Glass Skin",
+    harga: "Rp355.000",
+    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash", "Whitening Serum"],
+  },
+  {
+    img: paketFull,
+    namaPaket: "Paket Full Booster Skin",
+    harga: "Rp443.000",
+    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash", "Whitening Serum", "Night Cream"],
+  },
 ];

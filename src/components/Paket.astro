@@ -1,0 +1,23 @@
+---
+import CardPaket from "./CardPaket.astro";
+import { PAKET } from "../constants";
+---
+
+<section
+  id="paket"
+  class="max-container flex h-fit w-full flex-col gap-10 px-5 py-16 lg:gap-16 lg:px-10"
+>
+  <div class="flex items-center justify-between gap-3 max-md:flex-col">
+    <h1 class="max-w-lg text-3xl font-semibold leading-[120%] mobile-md:text-4xl lg:text-5xl">
+      Pilih <span class="text-accent-base">Paket</span> yang Sesuai untuk <span
+        class="text-accent-base">Kulit</span
+      > Anda
+    </h1>
+    <p class="max-w-md font-montserrat leading-[140%] lg:text-lg">
+      Reglow Skincare Hadir dengan Berbagai Pilihan untuk Setiap Jenis Kulit
+    </p>
+  </div>
+  <div class="grid w-full grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+    {PAKET.map((pkt) => <CardPaket {...pkt} />)}
+  </div>
+</section>
