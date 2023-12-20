@@ -1,0 +1,23 @@
+---
+import CardProduk from "./CardProduk.astro";
+import { PRODUK } from "../constants";
+---
+
+<section
+  id="produk"
+  class="max-container flex h-fit w-full flex-col gap-10 px-5 py-16 lg:gap-16 lg:px-10"
+>
+  <div class="flex flex-col items-center justify-center gap-3 text-center">
+    <h1 class="max-w-lg text-3xl font-semibold leading-[120%] mobile-md:text-4xl lg:text-5xl">
+      Produk Populer <span class="text-accent-base">Reglow</span>
+    </h1>
+    <p class="font-montserrat leading-[140%] lg:text-lg">
+      Temukan Rincian Terbaik dari Favorit Pengguna Kami untuk Kulit Sehat dan Bersinar Anda
+    </p>
+  </div>
+  <div
+    class="grid w-full grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3 xl:gap-14"
+  >
+    {PRODUK.map((prdk) => <CardProduk {...prdk} />)}
+  </div>
+</section>

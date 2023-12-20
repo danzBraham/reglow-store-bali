@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import WhatsappButton from "./WhatsappButton";
+
+interface Props {
+  img: any;
+  produk: string;
+  harga: string;
+}
+
+const { img, produk, harga } = Astro.props;
+---
+
+<div class="overflow-hidden rounded-[20px] shadow-basic">
+  <div
+    class="rounded-b- flex max-h-[300px] max-w-[350px] items-start justify-center rounded-[20px] border-b-2 border-accent-base bg-[#F0EBEF] px-[25px]"
+  >
+    <Image
+      src={img}
+      alt={produk}
+      class="max-h-[300px] min-h-[300px] min-w-[300px] max-w-[300px] object-contain object-center"
+    />
+  </div>
+  <div class="flex flex-col gap-4 px-[30px] py-5">
+    <p class="text-3xl capitalize leading-[120%]">{produk}</p>
+    <p class="font-montserrat text-[32px] font-semibold leading-[120%]">{harga}</p>
+    <WhatsappButton label="Pesan Sekarang" color="white" font="montserrat" width="full" />
+  </div>
+</div>

@@ -12,6 +12,13 @@ import paketGlowing from "../assets/paket-glowing-skin.png";
 import paketKorean from "../assets/paket-korean-glass.png";
 import paketFull from "../assets/paket-full-booster.png";
 
+import dayCream from "../assets/produk-day-cream.png";
+import toner from "../assets/produk-toner.png";
+import facialWash from "../assets/produk-facial-wash.png";
+import serum from "../assets/produk-serum.png";
+import nightCream from "../assets/produk-night-cream.png";
+import mask from "../assets/produk-mask.png";
+
 interface NavLink {
   key: string;
   href: string;
@@ -25,6 +32,7 @@ export const NAV_LINKS: NavLink[] = [
   { key: "bahan", href: "#bahan", label: "Bahan" },
   { key: "testimoni", href: "#testimoni", label: "Testimoni" },
   { key: "paket", href: "#paket", label: "Paket" },
+  { key: "produk", href: "#produk", label: "Produk" },
 ];
 
 interface Manfaat {
@@ -105,4 +113,19 @@ export const PAKET: Paket[] = [
     harga: "Rp443.000",
     produks: ["Day Cream", "2 in 1 Toner", "Facial Wash", "Whitening Serum", "Night Cream"],
   },
+];
+
+interface Produk {
+  img: any;
+  produk: string;
+  harga: string;
+}
+
+export const PRODUK: Produk[] = [
+  { img: dayCream, produk: "Day Cream", harga: "Rp90.000" },
+  { img: toner, produk: "2 in 1 Toner", harga: "Rp90.000" },
+  { img: facialWash, produk: "Facial Wash", harga: "Rp85.000" },
+  { img: serum, produk: "Whitening Serum", harga: "Rp90.000" },
+  { img: nightCream, produk: "Night Cream", harga: "Rp88.000" },
+  { img: mask, produk: "Sheet Mask", harga: "Rp19.000" },
 ];
