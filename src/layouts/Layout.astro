@@ -22,7 +22,7 @@ const { title = "Reglow Store Bali", description = "Agen Reglow bali" } = Astro.
     <title>{title}</title>
   </head>
   <body class="bg-neutral-base font-garamond text-neutral-1000">
-    <Header />
+    <Header client:load />
     <slot />
     <Footer />
   </body>
