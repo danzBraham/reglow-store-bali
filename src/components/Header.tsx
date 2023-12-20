@@ -21,8 +21,8 @@ const Header = () => {
           <span className="sr-only">Pergi ke Beranda</span>
         </a>
         <div
-          className={`invisible absolute left-0 right-0 top-[63px] min-h-fit w-full rounded-b-xl bg-neutral-base/50 px-5 py-10 opacity-0 backdrop-blur-xl backdrop-filter duration-300 lg:visible lg:static lg:w-fit lg:rounded-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
-            isActive && "slide border-b-[3px] border-t-[3px] border-main-base"
+          className={`invisible absolute left-0 right-0 top-[63px] min-h-fit w-full rounded-b-xl bg-main-200 px-5 py-10 opacity-0 duration-300 lg:visible lg:static lg:w-fit lg:rounded-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
+            isActive && "slide"
           }`}
         >
           <ul className="text-medium flex w-full flex-col items-center justify-center gap-10 text-lg lg:flex-row lg:gap-12">
