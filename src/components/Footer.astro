@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import logoWhite from "../assets/logo-white.svg";
+import { NAV_LINKS, SOSMED } from "../constants";
+---
+
+<footer
+  class="flex flex-wrap gap-16 bg-main-950 px-5 py-12 text-[#fff] max-md:flex-col md:px-10 lg:justify-between lg:px-20 xl:justify-between"
+>
+  <div class="flex w-[150px] flex-col gap-4">
+    <Image src={logoWhite} alt="Logo Reglow Store Bali" />
+    <div class="flex items-center gap-2">
+      {
+        SOSMED.map(({ img, alt, link }) => (
+          <a
+            href={link}
+            class="flex h-[40px] w-[40px] items-center justify-center rounded-xl bg-accent-base p-2 hover:bg-accent-300"
+          >
+            <Image src={img} alt={alt} class="w-full" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="flex max-h-[250px] flex-wrap gap-10 max-md:flex-col md:max-w-md md:items-center md:text-lg lg:gap-14"
+  >
+    {
+      NAV_LINKS.map(({ href, label }) => (
+        <a href={href} class="links w-fit">
+          {label}
+        </a>
+      ))
+    }
+  </div>
+  <div>
+    <p class="text-2xl font-bold">Tentang Reglow Store Bali</p>
+    <p class="mt-[10px] font-montserrat md:max-w-lg xl:max-w-sm">
+      Kami agen skincare Reglow di Bali, siap memberikan layanan terbaik untuk kecantikan dan
+      kesehatan kulit Anda.
+    </p>
+  </div>
+</footer>

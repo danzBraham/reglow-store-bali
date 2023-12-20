@@ -19,6 +19,8 @@ import serum from "../assets/produk-serum.png";
 import nightCream from "../assets/produk-night-cream.png";
 import mask from "../assets/produk-mask.png";
 
+import instagram from "../assets/instagram.svg";
+import tiktok from "../assets/tiktok.svg";
 interface NavLink {
   key: string;
   href: string;
@@ -128,4 +130,19 @@ export const PRODUK: Produk[] = [
   { img: serum, produk: "Whitening Serum", harga: "Rp90.000" },
   { img: nightCream, produk: "Night Cream", harga: "Rp88.000" },
   { img: mask, produk: "Sheet Mask", harga: "Rp19.000" },
+];
+
+interface Sosmed {
+  img: any;
+  alt: string;
+  link: string;
+}
+
+export const SOSMED: Sosmed[] = [
+  {
+    img: instagram,
+    alt: "Instagram Reglow Store Bali",
+    link: "https://www.instagram.com/reglow.store.bali/",
+  },
+  { img: tiktok, alt: "Tiktok Reglow Store Bali", link: "https://www.tiktok.com/@reglowstorebali" },
 ];
