@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { TESTIMONI } from "../constants";
-import testimoni1 from "../assets/testimoni-1.jpeg";
 import { register, type SwiperContainer } from "swiper/element/bundle";
 
 const Testimoni = () => {
