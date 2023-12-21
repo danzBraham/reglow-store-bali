@@ -8,6 +8,17 @@ import aloe from "../assets/aloe.png";
 import cucumicus from "../assets/cucumicus.png";
 import vitamin from "../assets/vitamin.png";
 
+import testimoni1 from "../assets/testimoni-1.jpeg";
+import testimoni2 from "../assets/testimoni-2.jpeg";
+import testimoni3 from "../assets/testimoni-3.jpeg";
+import testimoni4 from "../assets/testimoni-4.jpeg";
+import testimoni5 from "../assets/testimoni-5.jpeg";
+import testimoni6 from "../assets/testimoni-6.jpeg";
+import testimoni7 from "../assets/testimoni-7.jpeg";
+import testimoni8 from "../assets/testimoni-8.jpeg";
+import testimoni9 from "../assets/testimoni-9.jpeg";
+import testimoni10 from "../assets/testimoni-10.jpeg";
+
 import paketGlowing from "../assets/paket-glowing-skin.png";
 import paketKorean from "../assets/paket-korean-glass.png";
 import paketFull from "../assets/paket-full-booster.png";
@@ -87,6 +98,24 @@ export const BAHAN: Bahan[] = [
   { img: aloe, namaBahan: "Aloe Vera Extract" },
   { img: cucumicus, namaBahan: "Cucumicus Sativus" },
   { img: vitamin, namaBahan: "Vitamin E" },
+];
+
+interface Testimoni {
+  img: any;
+  alt: string;
+}
+
+export const TESTIMONI: Testimoni[] = [
+  { img: testimoni1.src, alt: "testimoni-1" },
+  { img: testimoni2.src, alt: "testimoni-2" },
+  { img: testimoni3.src, alt: "testimoni-3" },
+  { img: testimoni4.src, alt: "testimoni-4" },
+  { img: testimoni5.src, alt: "testimoni-5" },
+  { img: testimoni6.src, alt: "testimoni-6" },
+  { img: testimoni7.src, alt: "testimoni-7" },
+  { img: testimoni8.src, alt: "testimoni-8" },
+  { img: testimoni9.src, alt: "testimoni-9" },
+  { img: testimoni10.src, alt: "testimoni-10" },
 ];
 
 interface Paket {

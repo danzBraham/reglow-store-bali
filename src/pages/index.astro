@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import Manfaat from "../components/Manfaat.astro";
 import Unggul from "../components/Unggul.astro";
 import Bahan from "../components/Bahan.astro";
+import Testimoni from "../components/Testimoni.tsx";
 import Paket from "../components/Paket.astro";
 import ProdukPopuler from "../components/ProdukPopuler.astro";
 ---
@@ -14,6 +15,7 @@ import ProdukPopuler from "../components/ProdukPopuler.astro";
     <Manfaat />
     <Unggul />
     <Bahan />
+    <Testimoni client:visible />
     <Paket />
     <ProdukPopuler />
   </main>
