@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from "tailwindcss/defaultTheme";
-
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -14,8 +12,8 @@ export default {
         basic: "0px 8px 24px 0px rgba(0, 0, 0, 0.1)",
       },
       fontFamily: {
-        garamond: ["EB Garamond Variable", ...defaultTheme.fontFamily.serif],
-        montserrat: ["Montserrat Variable", ...defaultTheme.fontFamily.sans],
+        garamond: ["EB Garamond", "sans-serif"],
+        montserrat: ["Montserrat", "sans"],
       },
       colors: {
         neutral: {

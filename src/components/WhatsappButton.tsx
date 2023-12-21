@@ -25,7 +25,7 @@ const WhatsappButton = ({
     <a
       href="https://wa.me/6285829125631"
       target="_blank"
-      className={`flex w-full items-center gap-3 rounded-xl px-5 py-3 text-lg  font-${font}
+      className={`flex w-full items-center gap-3 rounded-xl px-5 py-3 text-lg font-medium font-${font}
         ${width === "fit" ? "md:w-fit" : "md:w-full"}
         ${size === "small" && "lg:py-2"}
         ${
