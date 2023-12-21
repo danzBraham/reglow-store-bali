@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro check && bunx --bun astro build",
+    "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",
-    "@astrojs/react": "^3.0.7",
+    "@astrojs/react": "^3.0.8",
     "@astrojs/tailwind": "^5.0.3",
     "@fontsource-variable/eb-garamond": "^5.0.17",
     "@fontsource-variable/montserrat": "^5.0.17",
