@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NAV_LINKS } from "../constants";
 import logo from "../assets/logo.svg";
 import WhatsappButton from "./WhatsappButton.tsx";
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleClick = () => {
     if (window.innerWidth > 1024) {
@@ -13,19 +13,27 @@ const Header = () => {
     setIsActive((currentState) => !currentState);
   };
 
+  useEffect(() => {
+    window.document.documentElement.style.setProperty("scroll-padding", `25px`);
+  }, []);
+
   return (
     <header className="fixed z-50 w-full bg-neutral-base/50 backdrop-blur-xl backdrop-filter">
-      <nav className="max-container flex items-center justify-between px-5 py-2 duration-300 xl:px-10 xl:py-3">
+      <nav
+        className={`max-container flex items-center justify-between px-5 py-2 duration-300 xl:px-10 xl:py-3 ${
+          isActive && "bg-main-200"
+        }`}
+      >
         <a href="/#beranda">
           <img src={logo.src} alt="Logo" className="w-[85px]" />
           <span className="sr-only">Pergi ke Beranda</span>
         </a>
         <div
-          className={`invisible absolute left-0 right-0 top-[63px] z-40 min-h-fit w-full rounded-b-xl bg-neutral-base/50 px-5 py-10 opacity-0 backdrop-blur-xl duration-300 xl:visible xl:static xl:w-fit xl:rounded-none xl:bg-transparent xl:p-0 xl:opacity-100 ${
-            isActive && "slide border-b-[3px] border-t-[3px] border-main-base"
+          className={`invisible absolute left-0 right-0 top-[63px] z-40 min-h-dvh w-full rounded-b-xl bg-main-200 px-5 py-10 opacity-0 duration-300 xl:visible xl:static xl:min-h-fit xl:w-fit xl:rounded-none xl:bg-transparent xl:p-0 xl:opacity-100 ${
+            isActive && "slide"
           }`}
         >
-          <ul className="text-medium flex w-full flex-col items-center justify-center gap-10 text-xl xl:flex-row xl:gap-12">
+          <ul className="text-medium flex h-full w-full flex-col items-center justify-center gap-10 text-xl xl:flex-row xl:gap-12">
             {NAV_LINKS.map((link) => (
               <li key={link.key} onClick={handleClick}>
                 <a href={link.href} className="links py-[2px]">

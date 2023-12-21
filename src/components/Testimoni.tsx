@@ -69,7 +69,7 @@ const Testimoni = () => {
       </div>
       <swiper-container ref={swiperRef} init="false" class="h-[500px] w-full bg-transparent">
         {TESTIMONI.map(({ img, alt }) => (
-          <swiper-slide class="flex items-center justify-center pb-10">
+          <swiper-slide key={alt} class="flex items-center justify-center pb-10">
             <img src={img} alt={alt} className="h-full w-fit object-contain" />
           </swiper-slide>
         ))}
