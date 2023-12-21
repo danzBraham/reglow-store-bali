@@ -34,10 +34,10 @@ const Header = () => {
           }`}
         >
           <ul className="text-medium flex h-full w-full flex-col items-center justify-center gap-10 text-xl xl:flex-row xl:gap-12">
-            {NAV_LINKS.map((link) => (
-              <li key={link.key} onClick={handleClick}>
-                <a href={link.href} className="links py-[2px]">
-                  {link.label}
+            {NAV_LINKS.map(({ key, href, label }) => (
+              <li key={key} onClick={handleClick}>
+                <a href={href} title={label} className="links py-[2px]">
+                  {label}
                 </a>
               </li>
             ))}
