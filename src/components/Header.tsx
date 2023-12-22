@@ -25,7 +25,7 @@ const Header = () => {
         }`}
       >
         <a href="/#beranda">
-          <img src={logo.src} alt="Logo" className="w-[85px]" />
+          <img src={logo.src} alt="Logo" width={85} />
           <span className="sr-only">Pergi ke Beranda</span>
         </a>
         <div

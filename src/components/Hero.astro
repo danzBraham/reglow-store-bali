@@ -19,8 +19,16 @@ import WhatsappButton from "./WhatsappButton.tsx";
       </p>
       <WhatsappButton label="Pesan Sekarang" color="black" font="montserrat" />
     </div>
-    <div class="w-full drop-shadow-lg md:max-w-[400px] lg:max-w-[450px] xl:max-w-[650px]">
-      <Image src={heroImage} alt="Gambar Hero" />
+    <div
+      class="flex w-full items-center justify-center drop-shadow-lg md:max-w-[400px] lg:max-w-[450px] xl:max-w-[650px]"
+    >
+      <Image
+        src={heroImage}
+        alt="Gambar Hero"
+        widths={[400, 450, 650]}
+        sizes={`(max-width: 425px) 400px, (max-width: 768px) 650px, (max-width: 1024px) 450px, 650px`}
+        class="w-full max-w-[650px]"
+      />
     </div>
   </div>
 </section>
