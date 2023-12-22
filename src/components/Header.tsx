@@ -57,6 +57,7 @@ const Header = () => {
           onClick={handleClick}
         >
           <button
+            aria-label="Toggle Menu"
             className={`absolute flex w-full flex-col items-end gap-2 ${isActive && "hamburger"}`}
           >
             <span className="block h-[3px] w-full origin-top-right rounded bg-neutral-1000 transition duration-300 ease-in-out"></span>
