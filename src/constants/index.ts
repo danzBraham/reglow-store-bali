@@ -19,9 +19,11 @@ import testimoni8 from "../assets/testimoni-8.webp";
 import testimoni9 from "../assets/testimoni-9.webp";
 import testimoni10 from "../assets/testimoni-10.webp";
 
-import paketGlowing from "../assets/paket-glowing-skin.png";
-import paketKorean from "../assets/paket-korean-glass.png";
-import paketFull from "../assets/paket-full-booster.png";
+import paketBasic from "../assets/paket-basic.jpeg";
+import paketAcne from "../assets/paket-acne.jpeg";
+import paketGlowing from "../assets/paket-glowing.jpeg";
+import paketFlek from "../assets/paket-flek-hitam.jpeg";
+import paketUltimate from "../assets/paket-ultimate.jpeg";
 
 import dayCream from "../assets/produk-day-cream.png";
 import toner from "../assets/produk-toner.png";
@@ -32,6 +34,7 @@ import mask from "../assets/produk-mask.png";
 
 import instagram from "../assets/instagram.svg";
 import tiktok from "../assets/tiktok.svg";
+
 interface NavLink {
   key: string;
   href: string;
@@ -127,22 +130,41 @@ interface Paket {
 
 export const PAKET: Paket[] = [
   {
-    img: paketGlowing,
-    namaPaket: "Paket Glowing Skin Treatment",
+    img: paketBasic,
+    namaPaket: "Paket Basic",
     harga: "Rp265.000",
-    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash"],
+    produks: ["Micellar Water", "Intensive Cream", "Facial Wash"],
   },
   {
-    img: paketKorean,
-    namaPaket: "Paket Korean Glass Skin",
+    img: paketAcne,
+    namaPaket: "Paket Acne",
+    harga: "Rp353.000",
+    produks: ["Micellar Water", "Intensive Cream", "Facial Wash", "Night Cream"],
+  },
+  {
+    img: paketGlowing,
+    namaPaket: "Paket Glowing",
     harga: "Rp355.000",
-    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash", "Whitening Serum"],
+    produks: ["Micellar Water", "Intensive Cream", "Facial Wash", "Serum Reglow"],
   },
   {
-    img: paketFull,
-    namaPaket: "Paket Full Booster Skin",
+    img: paketFlek,
+    namaPaket: "Paket Flek Hitam",
     harga: "Rp443.000",
-    produks: ["Day Cream", "2 in 1 Toner", "Facial Wash", "Whitening Serum", "Night Cream"],
+    produks: ["Micellar Water", "Intensive Cream", "Facial Wash", "Serum Reglow", "Night Cream"],
+  },
+  {
+    img: paketUltimate,
+    namaPaket: "Paket Ultimate",
+    harga: "Rp462.000",
+    produks: [
+      "Micellar Water",
+      "Intensive Cream",
+      "Facial Wash",
+      "Serum Reglow",
+      "Night Cream",
+      "Sheet Mask",
+    ],
   },
 ];
 

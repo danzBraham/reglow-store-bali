@@ -14,15 +14,17 @@ const { img, namaPaket, harga, produks } = Astro.props;
 const sukuNamaPaket = namaPaket.split(" ");
 ---
 
-<div class="min-h-[865px] overflow-hidden rounded-[20px] text-center shadow-basic md:max-w-[360px]">
+<div
+  class="min-h-[865px] w-full overflow-hidden rounded-[20px] text-center shadow-basic md:max-w-[360px]"
+>
   <Image src={img} alt={namaPaket} class="max-h-[300px] w-full object-cover object-center" />
   <div class="flex min-h-[565px] w-full flex-col items-center justify-between gap-10 p-[30px]">
     <div class="flex flex-col gap-[30px]">
       <div class="flex flex-col gap-3 text-[40px] leading-[110%]">
         <p class="font-medium">
           {sukuNamaPaket[0]}
-          <span class="text-accent-base">{sukuNamaPaket[1]} {sukuNamaPaket[2]}</span>
-          {sukuNamaPaket[3]}
+          <span class="text-accent-base">{sukuNamaPaket[1]}</span>
+          {sukuNamaPaket[2]}
         </p>
         <p class="font-montserrat font-semibold">{harga}</p>
       </div>
