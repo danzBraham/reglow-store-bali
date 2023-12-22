@@ -8,16 +8,16 @@ import aloe from "../assets/aloe.png";
 import cucumicus from "../assets/cucumicus.png";
 import vitamin from "../assets/vitamin.png";
 
-import testimoni1 from "../assets/testimoni-1.jpeg";
-import testimoni2 from "../assets/testimoni-2.jpeg";
-import testimoni3 from "../assets/testimoni-3.jpeg";
-import testimoni4 from "../assets/testimoni-4.jpeg";
-import testimoni5 from "../assets/testimoni-5.jpeg";
-import testimoni6 from "../assets/testimoni-6.jpeg";
-import testimoni7 from "../assets/testimoni-7.jpeg";
-import testimoni8 from "../assets/testimoni-8.jpeg";
-import testimoni9 from "../assets/testimoni-9.jpeg";
-import testimoni10 from "../assets/testimoni-10.jpeg";
+import testimoni1 from "../assets/testimoni-1.webp";
+import testimoni2 from "../assets/testimoni-2.webp";
+import testimoni3 from "../assets/testimoni-3.webp";
+import testimoni4 from "../assets/testimoni-4.webp";
+import testimoni5 from "../assets/testimoni-5.webp";
+import testimoni6 from "../assets/testimoni-6.webp";
+import testimoni7 from "../assets/testimoni-7.webp";
+import testimoni8 from "../assets/testimoni-8.webp";
+import testimoni9 from "../assets/testimoni-9.webp";
+import testimoni10 from "../assets/testimoni-10.webp";
 
 import paketGlowing from "../assets/paket-glowing-skin.png";
 import paketKorean from "../assets/paket-korean-glass.png";
