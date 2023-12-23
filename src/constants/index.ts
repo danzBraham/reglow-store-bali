@@ -25,8 +25,8 @@ import paketGlowing from "../assets/paket-glowing.png";
 import paketFlek from "../assets/paket-flek-hitam.png";
 import paketUltimate from "../assets/paket-ultimate.png";
 
-import dayCream from "../assets/produk-day-cream.png";
-import toner from "../assets/produk-toner.png";
+import intensiveCream from "../assets/produk-day-cream.png";
+import micellarWater from "../assets/produk-toner.png";
 import facialWash from "../assets/produk-facial-wash.png";
 import serum from "../assets/produk-serum.png";
 import nightCream from "../assets/produk-night-cream.png";
@@ -175,8 +175,8 @@ interface Produk {
 }
 
 export const PRODUK: Produk[] = [
-  { img: dayCream, produk: "Day Cream", harga: "Rp90.000" },
-  { img: toner, produk: "2 in 1 Toner", harga: "Rp90.000" },
+  { img: intensiveCream, produk: "Intensive Cream", harga: "Rp90.000" },
+  { img: micellarWater, produk: "Micellar Water", harga: "Rp90.000" },
   { img: facialWash, produk: "Facial Wash", harga: "Rp85.000" },
   { img: serum, produk: "Whitening Serum", harga: "Rp90.000" },
   { img: nightCream, produk: "Night Cream", harga: "Rp88.000" },
