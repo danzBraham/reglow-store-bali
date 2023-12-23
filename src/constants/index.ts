@@ -19,11 +19,11 @@ import testimoni8 from "../assets/testimoni-8.webp";
 import testimoni9 from "../assets/testimoni-9.webp";
 import testimoni10 from "../assets/testimoni-10.webp";
 
-import paketBasic from "../assets/paket-basic.jpeg";
-import paketAcne from "../assets/paket-acne.jpeg";
-import paketGlowing from "../assets/paket-glowing.jpeg";
-import paketFlek from "../assets/paket-flek-hitam.jpeg";
-import paketUltimate from "../assets/paket-ultimate.jpeg";
+import paketBasic from "../assets/paket-basic.png";
+import paketAcne from "../assets/paket-acne.png";
+import paketGlowing from "../assets/paket-glowing.png";
+import paketFlek from "../assets/paket-flek-hitam.png";
+import paketUltimate from "../assets/paket-ultimate.png";
 
 import dayCream from "../assets/produk-day-cream.png";
 import toner from "../assets/produk-toner.png";
