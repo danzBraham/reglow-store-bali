@@ -109,16 +109,16 @@ interface Testimoni {
 }
 
 export const TESTIMONI: Testimoni[] = [
-  { img: testimoni1.src, alt: "testimoni-1" },
-  { img: testimoni2.src, alt: "testimoni-2" },
-  { img: testimoni3.src, alt: "testimoni-3" },
-  { img: testimoni4.src, alt: "testimoni-4" },
-  { img: testimoni5.src, alt: "testimoni-5" },
-  { img: testimoni6.src, alt: "testimoni-6" },
-  { img: testimoni7.src, alt: "testimoni-7" },
-  { img: testimoni8.src, alt: "testimoni-8" },
-  { img: testimoni9.src, alt: "testimoni-9" },
-  { img: testimoni10.src, alt: "testimoni-10" },
+  { img: testimoni1, alt: "testimoni-1" },
+  { img: testimoni2, alt: "testimoni-2" },
+  { img: testimoni3, alt: "testimoni-3" },
+  { img: testimoni4, alt: "testimoni-4" },
+  { img: testimoni5, alt: "testimoni-5" },
+  { img: testimoni6, alt: "testimoni-6" },
+  { img: testimoni7, alt: "testimoni-7" },
+  { img: testimoni8, alt: "testimoni-8" },
+  { img: testimoni9, alt: "testimoni-9" },
+  { img: testimoni10, alt: "testimoni-10" },
 ];
 
 interface Paket {

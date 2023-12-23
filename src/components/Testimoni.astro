@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import { TESTIMONI } from "../constants";
+---
+
+<section
+  id="testimoni"
+  class="max-container flex w-full flex-col gap-10 px-5 py-16 lg:gap-16 lg:px-10"
+>
+  <div class="flex flex-col items-center justify-center gap-3 text-center">
+    <h1 class="text-3xl font-semibold leading-[110%] mobile-md:text-4xl lg:text-5xl">
+      Pendapat Mereka tentang <span class="text-accent-base">Reglow</span>
+    </h1>
+    <p class="max-w-2xl font-montserrat leading-[140%] lg:text-lg">
+      Pelanggan Sejati, Cerita Nyata
+    </p>
+  </div>
+  <swiper-container init="false" class="h-[500px] w-full bg-transparent">
+    {
+      TESTIMONI.map(({ img, alt }) => (
+        <swiper-slide key={alt} class="flex items-center justify-center pb-10">
+          <Image src={img} alt={alt} class="h-full w-fit object-contain" />
+        </swiper-slide>
+      ))
+    }
+  </swiper-container>
+</section>
+
+<script>
+  import { register } from "swiper/element/bundle";
+  register();
+
+  const swiperContainer = document.querySelector("swiper-container");
+  const swiperParams = {
+    navigation: true,
+    pagination: true,
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    injectStyles: [
+      `
+        .swiper-button-next,
+        .swiper-button-prev {
+          background-color: #d5ac42;
+          border-radius: 100%;
+          color: white;
+          width: 25px;  
+          height: 25px; 
+          padding: 10px; 
+        }
+
+        .swiper-pagination-bullet {
+          width: 7px;
+          height: 7px;
+          background-color: #d5ac42;
+        }
+
+        @media (max-width: 768px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 20px;
+            height: 20px;
+            padding: 8px; 
+        }
+      `,
+    ],
+  };
+
+  Object.assign(swiperContainer!, swiperParams);
+  swiperContainer?.initialize();
+</script>
