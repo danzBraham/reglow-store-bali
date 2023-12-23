@@ -5,7 +5,8 @@ import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  keywords: string;
 }
 
 const { title = "Reglow Store Bali", description = "Agen Reglow bali" } = Astro.props;
@@ -16,9 +17,32 @@ const { title = "Reglow Store Bali", description = "Agen Reglow bali" } = Astro.
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+    <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.reglowstorebali.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Reglow Store Bali" />
+    <meta
+      property="og:description"
+      content="Distributor resmi Reglow di Bali. Produk-produk asli, harga terjangkau, solusi kulit sehat Anda. Kunjungi Reglow Store Bali sekarang juga!"
+    />
+    <meta property="og:image" content="../assets/og-image.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="reglowstorebali.com" />
+    <meta property="twitter:url" content="https://www.reglowstorebali.com/" />
+    <meta name="twitter:title" content="Reglow Store Bali" />
+    <meta
+      name="twitter:description"
+      content="Distributor resmi Reglow di Bali. Produk-produk asli, harga terjangkau, solusi kulit sehat Anda. Kunjungi Reglow Store Bali sekarang juga!"
+    />
+    <meta name="twitter:image" content="../assets/og-image.png" />
     <title>{title}</title>
   </head>
   <body class="bg-neutral-base font-garamond text-neutral-1000">
