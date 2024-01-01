@@ -192,8 +192,8 @@ interface Sosmed {
 export const SOSMED: Sosmed[] = [
   {
     img: instagram,
-    alt: "Instagram",
+    alt: "Instagram Icon",
     link: "https://www.instagram.com/reglow.store.bali/",
   },
-  { img: tiktok, alt: "Tiktok", link: "https://www.tiktok.com/@reglowstorebali" },
+  { img: tiktok, alt: "Tiktok Icon", link: "https://www.tiktok.com/@reglowstorebali" },
 ];
