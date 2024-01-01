@@ -26,9 +26,6 @@ dependencies:
   '@types/react-dom':
     specifier: ^18.2.18
     version: 18.2.18
-  '@vercel/speed-insights':
-    specifier: ^1.0.2
-    version: 1.0.2
   astro:
     specifier: ^4.0.4
     version: 4.0.7(typescript@5.3.3)
@@ -1221,11 +1218,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: false
-
-  /@vercel/speed-insights@1.0.2:
-    resolution: {integrity: sha512-y5HWeB6RmlyVYxJAMrjiDEz8qAIy2cit0fhBq+MD78WaUwQvuBnQlX4+5MuwVTWi46bV3klaRMq83u9zUy1KOg==}
-    requiresBuild: true
     dev: false
 
   /@vitejs/plugin-react@4.2.1(vite@5.0.10):
